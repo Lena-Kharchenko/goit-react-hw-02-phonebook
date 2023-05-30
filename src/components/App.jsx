@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './contactForm/contactForm';
+import ContactForm from './contactForm/contactForm';
 import ContactList from './contactList/contactList';
 import ContactFilter from './contactFilter/contactFilter';
 import Notiflix from 'notiflix';
@@ -25,7 +25,7 @@ export class App extends Component {
     if (
       this.state.contacts.find(contact => contact.name === name) !== undefined
     ) {
-      Notiflix.Notify.failure(`${name} already in your contact book`);
+      Notiflix.Notify.failure(`${name} is already in your contact book`);
       return;
     }
 
@@ -33,7 +33,7 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: [newContact, ...prevState.contacts],
     }));
-    Notiflix.Notify.success(`You add ${name} to phonebook`);
+    Notiflix.Notify.success(`You add ${name} to your phonebook`);
   };
 
   visibleContacts = () => {
@@ -60,8 +60,8 @@ export class App extends Component {
     const { addContacts, handleChangeFilter, visibleContacts } = this;
     return (
       <div>
-        <h1>Phonebook</h1>
-        <Form onSubmit={addContacts} />
+        <h1>My Phonebook</h1>
+        <ContactForm onSubmit={addContacts} />
         <ContactFilter onChange={handleChangeFilter} />
         <ContactList
           contactList={visibleContacts()}
