@@ -1,12 +1,13 @@
 p {
   font-size: 20px;
+  font-weight: bolder;
 }
 
 input {
   width: 200px;
   height: 25px;
-  border-radius: 15px;
-  border: 2px solid #0ed7da;
+  border-radius: 5px;
+  border: 2px solid blue;
   background-color: white;
   padding: 5px 15px;
   font-size: 20px;
@@ -15,7 +16,7 @@ input {
 }
 
 input:focus {
-  background-color: #84e6f7;
+  background-color: #62c1f5;
 }
 
 form {
