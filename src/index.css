@@ -54,15 +54,15 @@ h1 {
 button {
   background-color: white;
   padding: 5px 25px;
-  border-radius: 15px;
-  border: 2px solid #0ed7da;
+  border-radius: 5px;
+  border: 2px solid blue;
   cursor: pointer;
   font-size: 20px;
 }
 
 button:hover,
 button:focus {
-  background-color: #0ed7da;
+  background-color: #62c1f5;
   color: white;
 }
 
@@ -83,7 +83,15 @@ li {
 }
 
 li:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: blue;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 10px;
+  width: 500px;
 }
 
 h2 {
